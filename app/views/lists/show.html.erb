@@ -14,8 +14,9 @@
       <%= link_to "delete this list", list_path(@list), class: "btn btn-cancel", data: { turbo_method: :delete, turbo_confirm: "Are you sure you want to delete this list?" } %>
     </div>
   </div>
+  <% if @list.photo.key.present? %>
   <%= cl_image_tag @list.photo.key, height: 300, width: 400, crop: :fill %>
-
+  <% end %>
 
   <div class="row my-2">
     <% @list.movies.each do |movie| %>
