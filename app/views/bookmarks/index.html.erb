@@ -1,0 +1,17 @@
+<h1>Save any kind of movies</h1>
+<p></p>
+
+<h2>My list</h2>
+<ul>
+  <% @lists.each do |list| %>
+    <li><%= link_to list.name, list_path(list) %></li>
+  <% end %>
+</ul>
+
+<%= link_to "create a movie list", new_list_path %>
+
+
+
+<%# navbarにmy listsとnew listを表示する　＞　layoutのapplicationに書く %>
+
+<%# リストを追加できるようにリンクを飛ばす %>
